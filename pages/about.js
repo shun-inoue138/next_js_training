@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import Links from '../components/Links';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
+import Main from '../components/Main';
 
 export default function About() {
   return (
@@ -14,11 +15,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Title>About</Title>
-
-        <Links />
-      </main>
+      <Main>About</Main>
 
       <Footer />
     </div>
