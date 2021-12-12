@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Main.module.css';
-import Title from './Title';
-import Links from './Links';
+import Title from '../Title';
+import Links from '../Links';
 
 const Main = ({ children }) => {
   return (
