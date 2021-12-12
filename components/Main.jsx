@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
+import classes from './Main.module.css';
 import Title from './Title';
 import Links from './Links';
 
 const Main = ({ children }) => {
   return (
     <div>
-      <main className={styles.main}>
+      <main className={classes.main}>
         <Title>{children}</Title>
         <Links />
       </main>
