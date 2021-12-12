@@ -30,7 +30,7 @@ const Links = () => {
     <div className={classes.grid}>
       {linkDatas.map((linkData) => {
         return (
-          <a href={linkData.url} className={classes.card} id={linkData.url}>
+          <a href={linkData.url} className={classes.card} key={linkData.url}>
             <h2>{linkData.title} &rarr;</h2>
             <p>{linkData.description}</p>
           </a>
