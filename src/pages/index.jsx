@@ -6,8 +6,13 @@ import Footer from '../components/Footer';
 import Title from '../components/Title';
 import Main from '../components/Main';
 import Header from '../components/Header';
+import { useCallback, useState } from 'react';
 
 export default function Home() {
+  const [count, setCount] = useState(1);
+  const handleClick = () => {
+    setCount((count) => ++count);
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +21,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <div>{count}</div>
+      <button
+        onClick={() => {
+          handleClick();
+        }}
+      >
+        ボタン
+      </button>
       <Main>Index</Main>
       <Footer />
     </div>
