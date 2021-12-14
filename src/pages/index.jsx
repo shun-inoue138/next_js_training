@@ -7,10 +7,14 @@ import Title from '../components/Title';
 import Main from '../components/Main';
 import Header from '../components/Header';
 import { useCallback, useState } from 'react';
-import { useCounter } from 'src/hooks/useCounter';
 
-export default function Home() {
-  const { count, setCount, isShow, setIsShow, handleClick } = useCounter();
+export default function Home({
+  count,
+  setCount,
+  isShow,
+  setIsShow,
+  handleClick,
+}) {
   const [text, setText] = useState('hoge');
   const [numAry, setNumAry] = useState([1, 2, 5]);
 
