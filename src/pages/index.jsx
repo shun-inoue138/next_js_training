@@ -7,15 +7,13 @@ import Title from '../components/Title';
 import Main from '../components/Main';
 import Header from '../components/Header';
 import { useCallback, useState } from 'react';
+import { useCounter } from 'src/hooks/useCounter';
 
 export default function Home() {
-  const [count, setCount] = useState(1);
+  const { count, setCount, isShow, setIsShow, handleClick } = useCounter();
   const [text, setText] = useState('hoge');
-  const [isShow, setIsShow] = useState(true);
   const [numAry, setNumAry] = useState([1, 2, 5]);
-  const handleClick = () => {
-    setCount((count) => ++count);
-  };
+
   const handleNumAry = () => {
     const additionalNum = Math.floor(Math.random() * 100);
     setNumAry((numAry) => [...numAry, additionalNum]);
